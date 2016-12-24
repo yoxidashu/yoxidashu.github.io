@@ -1,0 +1,44 @@
+body,p,div {
+	font-size: 15px;
+}
+/** nav  导航 */
+.container_right {
+	/*padding-right: 100px !important;*/
+}
+/** 中部 menu */
+.menu_class {
+	width: 80px;
+	height: 80px;
+	text-align: center;
+	display: inline-flex;
+	justify-content: center;
+	align-items: flex-end;
+	margin-right: 15px;
+	cursor: pointer;
+	margin-bottom: 25px;
+}
+.menu_class:hover {
+	background-color: #ccc;
+
+}
+/** 底部 */
+.footer_css {
+	width: 100%;
+	padding-top: 28px;
+	padding-bottom: 28px;
+	position: fixed;
+	bottom: 0;
+	color: #999;
+	background-color: #333333;
+	font-size: 12px;
+}
+.footer_css a {
+	color: #999;
+}
+.beian {
+	margin: 0 !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 12px;
+}

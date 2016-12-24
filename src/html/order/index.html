@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>GY后台管理系统</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../../plugins/css/bootstrap.min.css">
+	<script type="text/javascript" src="../../plugins/js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="../../plugins/js/bootstrap.min.js"></script>
+	<style type="text/css">
+	/** nav */
+		.container_right {
+			padding-right: 100px !important;
+		}
+	
+		.select_order {
+			border: 1px solid #FFF;
+			margin-top: 50px;
+			padding-top: 25px;
+		}
+		.order_type {
+			display: flex;
+			margin-bottom: 25px;
+		}
+		.type_text {
+			flex: 0 0 5%;
+			align-items: center;
+			display: flex;
+		}
+		.type_info {
+			flex: 0 0 28%;
+		}
+		.inputstyle {
+			display: initial;
+			width: auto;
+		}
+		
+		/** 订单模块 */
+		.order_main {
+			margin-top: 25px;
+		}
+		.tr_css td {
+			font: 12px/2 tahoma arial;
+			font-family: 'Microsoft YaHei';
+			padding: 6px 10px;
+			vertical-align: middle !important;
+			line-height: 2.0 !important;
+		}
+
+		/** 编辑订单 */
+		.edit_order {
+			width: 100%;
+			display: flex;
+		}
+		.left_name {
+			flex: 0 0 30%;
+			align-items: center;
+			display: flex;
+		}
+		.right_text {
+			flex: 0 0 70%;
+		}
+		.price_auxiliary {
+			margin: 0px !important;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	    <div class="container-fluid container_right">
+	    	<a class="navbar-brand" href="#">GY后台管理系统</a>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#">订单管理</a></li>
+		      </ul>
+		      
+		      <ul class="nav navbar-nav navbar-right">
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">账号管理<span class="caret"></span></a>
+		          <ul class="dropdown-menu dropdown-menu-left" role="menu">
+		            <li><a href="#">个人资料</a></li>
+		            <li><a href="#">修改密码</a></li>
+		            <li class="divider"></li>
+		            <li><a href="#">退出</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div>
+	    </div>
+	</nav>
+
+
+	<div class="container">
+		<p>改衣订单（包括改衣、织补、护理等定制之外的所有订单）改衣订单（包括改衣、织补、护理等定制之外的所有订单）改衣订单（包括改衣、织补、护理等定制之外的所有订单）</p>
+	</div>
+
+	<div class="select_order">
+		<div class="container-fluid order_type">
+			<div class="type_text">订单类型</div>
+			<div class="type_info">
+				<select class="form-control">
+					<option>改衣订单（包括改衣、织补、护理等定制之外的所有订单）</option>
+					<option>定制订单</option>
+				</select>
+			</div>
+				
+		</div>
+
+		<div class="container-fluid order_type">
+			<ul class="nav nav-pills" role="tablist">
+			  <li role="presentation" class="active"><a href="#">未处理新订单 <span class="badge">42</span></a></li>
+			  <li role="presentation"><a href="#">急单 <span class="badge">0</span></a></a></li>
+			  <li role="presentation"><a href="#">超过七天订单 <span class="badge">3</span></a></li>
+			  <li role="presentation"><a href="#">流程中订单 <span class="badge">3</span></a></li>
+			  <li role="presentation"><a href="#">需安排上门订单 <span class="badge">3</span></a></li>
+			  <li role="presentation"><a href="#">企业月结订单 <span class="badge">3</span></a></li>
+			</ul>
+		</div>
+
+		<div class="container-fluid">
+			根据订单号、手机号、姓名查找订单
+			<input type="text" class="form-control inputstyle">
+			<button type="button" class="btn btn-default">搜索</button>
+		</div>
+		
+	</div>
+	
+	<div class="order_main">
+		<table class="table table-hover">
+			<thead>
+				<tr style="background-color: #dfdfdf">
+					<th>序号</th>
+					<th>订单号</th>
+					<th>取衣类型及订单各类时间汇总</th>
+					<th>会员/改衣需求</th>
+					<th>订单类型/价格</th>
+					<th>用户姓名及联系信息</th>
+					<th>订单改衣详情及订单备注</th>
+					<th>支付方式及时间</th>
+					<th>订单进行状态</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="tr_css">
+					<td>1</td>
+					<td>2016122160406</td>
+					<td>
+						下单时间：2016-12-21 16:49:22<br>
+						取衣/量体类型：到店<br>
+						改完配送方式：待确认<br>
+						预约时间：2016-12-21 14:00:00<br>
+						上门时间：<br>
+						入仓时间：<br>
+					</td>
+					<td>
+						用户mid：<a class="collapsed" href="#"> 28002 </a>
+						<br>SVIP2 
+					</td>
+					<td>
+						改衣 <br>
+						原价：0 <br>
+						优惠价：0<br>
+					</td>
+					<td>
+						顾客姓名：dongzuhui<br>
+						电话：15814999503<br>
+						订单预约地址：广州市 越秀区 haha<br>
+					</td>
+					<td>
+						订单备注：
+					</td>
+					<td>
+						支付状态：未支付<br>
+						支付方式：<br>
+						支付时间： <br>
+						使用代金券：<br>
+					</td>
+					<td>
+						已下单（原等待处理） <br>
+						无人跟踪 <br>
+						<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="点我填写顺丰单号">快递单号</button><br>
+						点我查看订单状态历史记录<br>
+
+					</td>
+					<td>
+						<button type="button" class="btn btn-default">编辑详情</button><br>
+						<button type="button" class="btn btn-default">编辑状态</button><br>
+						<button type="button" class="btn btn-default">编辑身材信息</button><br>
+						<button type="button" class="btn btn-default">编辑订单详情</button><br>
+						<button type="button" class="btn btn-default">打印订单</button>
+					</td>
+				</tr>
+				<tr class="tr_css">
+					<td>1</td>
+					<td>2016122160406</td>
+					<td>
+						下单时间：2016-12-21 16:49:22<br>
+						取衣/量体类型：到店<br>
+						改完配送方式：待确认<br>
+						预约时间：2016-12-21 14:00:00<br>
+						上门时间：<br>
+						入仓时间：<br>
+					</td>
+					<td>
+						用户mid：28002 
+
+						<br>SVIP2 
+					</td>
+					<td>
+						改衣 <br>
+						原价：0 <br>
+						优惠价：0<br>
+					</td>
+					<td>
+						顾客姓名：dongzuhui<br>
+						电话：15814999503<br>
+						订单预约地址：广州市 越秀区 haha<br>
+					</td>
+					<td>
+						订单备注：<br>
+				        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				          服务详情
+				        <span class="caret"></span>
+				        </a>
+					</td>
+					
+					<td>
+						支付状态：未支付<br>
+						支付方式：<br>
+						支付时间： <br>
+						使用代金券：<br>
+					</td>
+					<td>
+						已下单（原等待处理） <br>
+						无人跟踪 <br>
+						点我填写顺丰单号 <br>
+						点我查看订单状态历史记录<br>
+					</td>
+					<td>
+						<button type="button" class="btn btn-default">编辑详情</button><br>
+						<button type="button" class="btn btn-default">编辑状态</button><br>
+						<button type="button" class="btn btn-default">编辑身材信息</button><br>
+						<button type="button" class="btn btn-default">编辑订单详情</button><br>
+						<button type="button" class="btn btn-default">打印订单</button>
+					</td>
+				</tr>
+				<tr class="tr_css">
+					<td colspan="10" style="padding: 0px;">
+						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					    <div class="panel-body">
+					        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					    </div>
+					</div>	
+					</td>
+				</tr>
+				<tr class="tr_css">
+					<td>1</td>
+					<td>2016122160406</td>
+					<td>
+						下单时间：2016-12-21 16:49:22<br>
+						取衣/量体类型：到店<br>
+						改完配送方式：待确认<br>
+						预约时间：2016-12-21 14:00:00<br>
+						上门时间：<br>
+						入仓时间：<br>
+					</td>
+					<td>
+						用户mid：28002 
+
+						<br>SVIP2 
+					</td>
+					<td>
+						改衣 <br>
+						原价：0 <br>
+						优惠价：0<br>
+					</td>
+					<td>
+						顾客姓名：dongzuhui<br>
+						电话：15814999503<br>
+						订单预约地址：广州市 越秀区 haha<br>
+					</td>
+					<td>
+						<button type="button" class="btn btn-default">查看详情</button><br>
+						订单备注：
+					</td>
+					<td>
+						支付状态：未支付<br>
+						支付方式：<br>
+						支付时间： <br>
+						使用代金券：<br>
+					</td>
+					<td>
+						已下单（原等待处理） <br>
+						无人跟踪 <br>
+						点我填写顺丰单号 <br>
+						点我查看订单状态历史记录<br>
+					</td>
+					<td>
+						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">编辑详情</button><br>
+						<button type="button" class="btn btn-default">编辑状态</button><br>
+						<button type="button" class="btn btn-default">编辑身材信息</button><br>
+						<button type="button" class="btn btn-default">编辑订单详情</button><br>
+						<button type="button" class="btn btn-default">打印订单</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+<input type="text" class="form-control" placeholder="Text input">
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">编辑详情</h4>
+      </div>
+      <div class="modal-body">
+      	<p class="text-muted">订单备注</p>
+<!-- 		<p class="text-primary">订单备注</p>
+		<p class="text-success">订单备注</p>
+		<p class="text-info">订单备注</p>
+		<p class="text-warning">订单备注</p>
+		<p class="text-danger">订单备注</p> -->
+        <textarea class="form-control" rows="3"></textarea>
+        <div class="edit_order">
+			<div class="left_name">量体师</div>
+			<div class="right_text">
+				<select class="form-control">
+					<option>曹总</option>
+					<option>小辉</option>
+					<option>唐哥</option>
+					<option>量体师A</option>
+					<option>量体师B</option>
+				</select>
+			</div>
+		</div>
+
+		<p class="text-danger price_auxiliary">订单金额（注意用户支付以此价格为准）</p>
+		<div class="input-group">
+		  <span class="input-group-addon">￥</span>
+		  <input type="text" class="form-control">
+		  <span class="input-group-addon">元</span>
+		</div>
+
+		<p class="text-muted price_auxiliary">原价金额</p>
+		<div class="input-group">
+		  <span class="input-group-addon">￥</span>
+		  <input type="text" class="form-control">
+		  <span class="input-group-addon">.00</span>
+		</div>
+
+		<p class="text-muted price_auxiliary">选择优惠券（重新选择优惠券会将之前选择的优惠券归还客户）</p>
+		<select class="form-control">
+		  <option>1</option>
+		  <option>2</option>
+		  <option>3</option>
+		  <option>4</option>
+		  <option>5</option>
+		</select>
+
+
+		<div class="edit_order">
+			<div class="left_name">裁缝师</div>
+			<div class="right_text">
+				<select class="form-control">
+					<option>曹总</option>
+					<option>小辉</option>
+					<option>唐哥</option>
+					<option>量体师A</option>
+					<option>量体师B</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="edit_order">
+			<div class="left_name">取衣类型</div>
+			<div class="right_text">
+				<select class="form-control">
+					<option>上门取衣</option>
+					<option>快递</option>
+					<option>到店</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="edit_order">
+			<div class="left_name">改完配送方式</div>
+			<div class="right_text">
+				<select class="form-control">
+					<option>待确定</option>
+					<option>到店自取</option>
+					<option>快递</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="edit_order">
+			<div class="left_name">订单服务类型</div>
+			<div class="right_text">
+				<select class="form-control">
+					<option>改衣</option>
+					<option>织补</option>
+					<option>皮衣皮具护理</option>
+					<option>洗衣</option>
+					<option>定制</option>
+					<option>熨烫</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="edit_order">
+			<div class="left_name">所属店铺</div>
+			<div class="right_text">
+				<select class="form-control">
+					<option>广州番禺</option>
+					<option>北京双井</option>
+					<option>深圳</option>
+					<option>东芝梦</option>
+				</select>
+			</div>
+		</div>
+
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-danger" data-dismiss="modal" style="float: left;">提交修改并置为加急订单</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
