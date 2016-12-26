@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>易改衣后台系统</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" media="screen" >
+	<link rel="stylesheet" type="text/css" href="../../plugins/css/bootstrap.min.css">
+	<script type="text/javascript" src="../../plugins/js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="../../plugins/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body {
+			background:-webkit-gradient(linear, 0 0, 0 100%, from(#e7e7e7), to(#ccc));
+			height: 100%;
+		}
+		.navbar {
+			margin: 0px !important;
+		}
+		.personnel_main {
+			padding-left: 10%;
+			padding-right: 10%;
+		}
+		.select_top {
+			display: flex;
+			background-color: #fff;
+		}
+		.select_left {
+			flex: 0 0 80%;
+		}
+		.select_right {
+		  	justify-content: flex-end;
+		  	flex:  0 0 20%;
+		  	display: flex;
+		}
+		.select_right input {
+			width: auto;
+			margin-right: 12px;
+		}
+		/**  pagination  pages */
+		.order_pages {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #fff;
+		}
+		.pagination {
+			margin: 0px !important;
+			margin-right: 15px !important;
+
+		}
+		.to_pages {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+		/** zhong  */
+		.select_body {
+			height: 520px;
+			background-color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default" role="navigation">
+	    <div class="container-fluid container_right">
+	    	<a class="navbar-brand" href="../index/index.html">GY后台管理系统</a>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#">量体师管理</a></li>
+		        <li><a href="#">裁缝管理</a></li>
+		        <li><a href="#">系统管理</a></li>
+		        <li><a href="#">通讯录管理</a></li>
+		      </ul>
+		      
+		      <ul class="nav navbar-nav navbar-right">
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">账号管理<span class="caret"></span></a>
+		          <ul class="dropdown-menu dropdown-menu-left" role="menu">
+		            <li><a href="#">个人资料</a></li>
+		            <li><a href="#">修改密码</a></li>
+		            <li class="divider"></li>
+		            <li><a href="#">退出</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div>
+	    </div>
+	</nav>
+
+	<div class="personnel_main">
+		
+		<div class="select_top">
+			<div class="select_left">
+				<button type="button" class="btn btn-default">添加量体师</button>
+			</div>
+			<div class="select_right">
+				<input type="text" class="form-control inputstyle" placeholder="订单号、手机号、姓名查找">
+				<button type="button" class="btn btn-default">搜索</button>
+			</div>
+		</div>
+		<div class="select_body">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>编号</th>
+						<th>姓名</th>
+						<th>电话</th>
+						<th>口号</th>
+						<th>店铺</th>
+						<th>级别</th>
+						<th>被喜欢数</th>
+						<th>头像</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>曹建华</td>
+						<td>18610049697</td>
+						<td>坚信一怔一项的力量</td>
+						<td>armani北京首都机场店</td>
+						<td>量体师，待下单师</td>
+						<td>1</td>
+						<td>
+							<button type="button">上传</button>
+						</td>
+						<td>
+							<button type="button">修改</button>
+							<button type="button">删除</button>
+						</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>曹建华</td>
+						<td>18610049697</td>
+						<td>坚信一怔一项的力量</td>
+						<td>armani北京首都机场店</td>
+						<td>量体师，待下单师</td>
+						<td>1</td>
+						<td>
+							<button type="button">上传</button>
+						</td>
+						<td>
+							<button type="button">修改</button>
+							<button type="button">删除</button>
+						</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>曹建华</td>
+						<td>18610049697</td>
+						<td>坚信一怔一项的力量</td>
+						<td>armani北京首都机场店</td>
+						<td>量体师，待下单师</td>
+						<td>1</td>
+						<td>
+							<button type="button">上传</button>
+						</td>
+						<td>
+							<button type="button">修改</button>
+							<button type="button">删除</button>
+						</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>曹建华</td>
+						<td>18610049697</td>
+						<td>坚信一怔一项的力量</td>
+						<td>armani北京首都机场店</td>
+						<td>量体师，待下单师</td>
+						<td>1</td>
+						<td>
+							<button type="button">上传</button>
+						</td>
+						<td>
+							<button type="button">修改</button>
+							<button type="button">删除</button>
+						</td>
+					</tr>	
+				</tbody>
+			</table>
+		</div>
+		<div class="container-fluid order_pages">
+				<div>
+					<ul class="pagination">
+					    <li class="disabled"><a href="#">&laquo;</a></li>
+					    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+					       <li><a href="#">2</a></li>
+					    <li><a href="#">3</a></li>
+					    <li><a href="#">4</a></li>
+					    <li><a href="#">5</a></li>
+					    <li><a href="#">&raquo;</a></li>
+					 </ul>
+
+				</div>
+				第
+				<div class="to_pages">
+					<select class="form-control">
+						<option>1</option>
+						<option>2</option>
+					</select>
+				</div>
+				页
+		</div>
+	</div>
+</body>
+</html>

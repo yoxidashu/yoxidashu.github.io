@@ -6,6 +6,15 @@ body,p,div {
 	/*padding-right: 100px !important;*/
 }
 /** 中部 menu */
+.main {
+	/*background-color: #ccc;*/
+	
+}
+.menu {
+}
+.menu .container a {
+	color: #a6a5ad;
+}
 .menu_class {
 	width: 80px;
 	height: 80px;
@@ -13,13 +22,9 @@ body,p,div {
 	display: inline-flex;
 	justify-content: center;
 	align-items: flex-end;
-	margin-right: 15px;
 	cursor: pointer;
-	margin-bottom: 25px;
-}
-.menu_class:hover {
-	background-color: #ccc;
-
+	margin-left: 12px;
+	margin-right: 12px;
 }
 /** 底部 */
 .footer_css {
@@ -41,4 +46,42 @@ body,p,div {
 	justify-content: center;
 	align-items: center;
 	font-size: 12px;
+}
+
+/**  menu images */
+.index_css {
+	background: url("../../imgs/index_out.png") no-repeat center 1px;
+	background-size: 58px 58px;
+}
+.order_css {
+	background: url("../../imgs/order.png") no-repeat center 1px;
+	background-size: 58px 58px;
+}
+.price_css {
+	background: url("../../imgs/price.png") no-repeat center 1px;
+	background-size: 58px 58px;
+}
+.pages_css {
+	background: url("../../imgs/pages.png") no-repeat center 1px;
+	background-size: 58px 58px;
+}
+.shop_css {
+	background: url("../../imgs/shop.png") no-repeat center 1px;
+	background-size: 58px 58px;
+}
+.brand_css {
+	background: url("../../imgs/brand.png") no-repeat center 1px;
+	background-size: 58px 58px;
+}
+.personnel_css {
+	background: url("../../imgs/personnel.png") no-repeat center 1px;
+	background-size: 58px 58px;
+}
+.account_css {
+	background: url("../../imgs/account.png") no-repeat center 1px;
+	background-size: 58px 58px;
+}
+.datatable_css {
+	background: url("../../imgs/datatable.png") no-repeat center 1px;
+	background-size: 58px 58px;
 }

@@ -1,0 +1,74 @@
+/** nav */
+.container_right {
+	padding-right: 100px !important;
+}
+
+.select_order {
+	border: 1px solid #FFF;
+	margin-top: 50px;
+	padding-top: 25px;
+}
+
+/** 订单模块 */
+.order_main {
+	margin-top: 25px;
+}
+.tr_css td {
+	font: 12px/2 tahoma arial;
+	font-family: 'Microsoft YaHei';
+	padding: 6px 10px;
+	vertical-align: middle !important;
+	line-height: 2.0 !important;
+}
+
+/** 编辑订单 */
+.edit_order {
+	width: 100%;
+	display: flex;
+}
+.left_name {
+	flex: 0 0 30%;
+	align-items: center;
+	display: flex;
+}
+.right_text {
+	flex: 0 0 70%;
+}
+.price_auxiliary {
+	margin: 0px !important;
+}
+
+/** select order */
+.select_top {
+	display: flex;
+}
+.select_model {
+	flex: 0 0 84%;
+	display: flex;
+}
+.select_right {
+	justify-content: flex-end;
+	display: flex;
+  	justify-content: flex-end;
+}
+.order_type {
+	width: auto;
+	align-items: center;
+	display: flex;
+	margin-right: 12px;
+}
+.inputstyle {
+	display: initial;
+	width: auto;
+	margin-right: 12px;
+}
+
+/**  pagination  pages */
+.pagination {
+	margin: 0px !important;
+	margin-right: 15px !important;
+}
+.to_pages {
+	margin-left: 10px;
+	margin-right: 10px;
+}
